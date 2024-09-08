@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     //define a private field for the dependency
     private Coach myCoach;
-    private Coach anotherCoach;
+   // private Coach anotherCoach;
     //define a constructor for dependency injection
     @Autowired
 //    Setter injection
@@ -18,10 +18,10 @@ public class DemoController {
 //        myCoach = theCoach;
 //    }
 //    Constructor Injection
-    public DemoController(@Qualifier ("cricketCoach")Coach theCoach,@Qualifier("cricketCoach")Coach theAnotherCoach){
+    public DemoController(@Qualifier ("cricketCoach")Coach theCoach/*,@Qualifier("cricketCoach")Coach theAnotherCoach*/){
         System.out.println("In Constructor"+ getClass().getName());
         myCoach = theCoach;
-        anotherCoach=theAnotherCoach;
+       // anotherCoach=theAnotherCoach;
     }
     //using with primary
 //    public DemoController(Coach theCoach){
@@ -37,7 +37,8 @@ public class DemoController {
 
     @GetMapping("/check")
     public String check(){
-        return "Comparing beans: myCoach== anotherCoach " +(myCoach==anotherCoach);
+        /*return "Comparing beans: myCoach== anotherCoach " +(myCoach==anotherCoach);*/
+        return "";
     }
 
 }
