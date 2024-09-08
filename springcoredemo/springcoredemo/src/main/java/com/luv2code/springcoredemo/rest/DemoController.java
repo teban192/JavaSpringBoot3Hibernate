@@ -17,12 +17,14 @@ public class DemoController {
 //        myCoach = theCoach;
 //    }
 //    Constructor Injection
-//    public DemoController(@Qualifier ("cricketCoach")Coach theCoach){
-//        myCoach = theCoach;
-//    }
-    public DemoController(Coach theCoach){
+    public DemoController(@Qualifier ("cricketCoach")Coach theCoach){
+        System.out.println("In Constructor"+ getClass().getName());
         myCoach = theCoach;
     }
+    //using with primary
+//    public DemoController(Coach theCoach){
+//        myCoach = theCoach;
+//    }
 
 
 
