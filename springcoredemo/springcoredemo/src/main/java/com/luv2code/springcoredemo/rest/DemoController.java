@@ -17,9 +17,14 @@ public class DemoController {
 //        myCoach = theCoach;
 //    }
 //    Constructor Injection
-    public DemoController(@Qualifier ("cricketCoach")Coach theCoach){
+//    public DemoController(@Qualifier ("cricketCoach")Coach theCoach){
+//        myCoach = theCoach;
+//    }
+    public DemoController(Coach theCoach){
         myCoach = theCoach;
     }
+
+
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout(){
