@@ -18,7 +18,7 @@ public class DemoController {
 //        myCoach = theCoach;
 //    }
 //    Constructor Injection
-    public DemoController(@Qualifier ("cricketCoach")Coach theCoach/*,@Qualifier("cricketCoach")Coach theAnotherCoach*/){
+    public DemoController(@Qualifier ("aquiatic")Coach theCoach/*,@Qualifier("cricketCoach")Coach theAnotherCoach*/){
         System.out.println("In Constructor"+ getClass().getName());
         myCoach = theCoach;
        // anotherCoach=theAnotherCoach;
